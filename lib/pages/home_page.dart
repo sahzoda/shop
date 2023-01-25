@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/widgets/searchWidget.dart';
+import 'package:shop_app/widgets/tabBarWidget.dart';
 
 class HomePage extends StatefulWidget {
  HomePage({ Key? key 
@@ -22,36 +24,26 @@ List<Widget> _tabs=[
   @override
   Widget build(BuildContext context){
     return DefaultTabController(
-      length: 5,
+      length: 9,
       child: Scaffold(
         appBar: AppBar(
-
-          title: Container(
-          width: double.infinity,
-          color: Colors.black12,
-         child:   Center(
-          child: TextField(
-            decoration: InputDecoration(
-             fillColor: Colors.red,
-                prefixIcon: const Icon(Icons.search),
-                hintText: 'Search...',
-                ),
-              ),
-          ),
-          ),
-          //   IconButton(onPressed: (() {}),
-          //    icon: Icon(Icons.search,color: Colors.red,))
-         
-          bottom: TabBar(
+        backgroundColor: Colors.white,
+          title: searchWidget(),
+           bottom: TabBar(
+            indicatorColor: Colors.blue,
+            isScrollable: true,
             tabs: [
-              Text("Home"),
-              Text("Category"),
-              Text("Stores"),
-              Text("Cart"),
-              Text("Profile"),
-            ]
-           
-            ),
+              tabBarWidget(labels: "Men"),
+              tabBarWidget(labels: "Women"),
+              tabBarWidget(labels: "Kids"),
+              tabBarWidget(labels: "accessories"),
+              tabBarWidget(labels: "Beauty"),
+              tabBarWidget(labels: "Bags"),
+              tabBarWidget(labels: "shoes"),
+              tabBarWidget(labels: "electronics"),
+              tabBarWidget(labels: "Home & Garden"),
+            ],
+          ),
         ),
         body: _tabs[_selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
@@ -74,3 +66,4 @@ List<Widget> _tabs=[
     );
   }
 }
+
