@@ -16,7 +16,7 @@ class searchWidget extends StatelessWidget {
             borderRadius:BorderRadius.circular(20),
             border: Border.all(width: 1,color: Colors.red) 
             ),
-               child:   Row(
+               child:   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children:[
           Row(
             children: [

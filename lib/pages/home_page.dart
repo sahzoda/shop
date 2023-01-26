@@ -24,7 +24,7 @@ List<Widget> _tabs=[
   @override
   Widget build(BuildContext context){
     return DefaultTabController(
-      length: 9,
+      length: 5,
       child: Scaffold(
         appBar: AppBar(
         backgroundColor: Colors.white,
@@ -33,6 +33,7 @@ List<Widget> _tabs=[
             indicatorColor: Colors.blue,
             isScrollable: true,
             tabs: [
+              
               tabBarWidget(labels: "Men"),
               tabBarWidget(labels: "Women"),
               tabBarWidget(labels: "Kids"),

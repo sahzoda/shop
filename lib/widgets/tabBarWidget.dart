@@ -7,10 +7,10 @@ class tabBarWidget extends StatelessWidget {
 final String labels;
   @override
   Widget build(BuildContext context) {
-    return TabBar(
-      tabs: [
-        Text(labels),
-      ]
+    return Tab(
+
+      child:  Text(labels,style: TextStyle(color: Colors.black),),
+      
      
       );
   }
