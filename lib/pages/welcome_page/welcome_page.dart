@@ -5,6 +5,15 @@ const WelcomePage({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context){
-    return Scaffold();
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            fit: BoxFit.cover,
+            image:AssetImage("assets/images/imapp/bgimage.jpg")                 
+          )
+        ),
+      ),
+    );
   }
 }
