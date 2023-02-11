@@ -50,22 +50,20 @@ class _SignUpPageState extends State<SignUpPage> {
 
   void _pickImageFromGallery() async {
     try {
-      final _pickedImage = await _picker.pickImage(
+      final pickedImage = await _picker.pickImage(
         source: ImageSource.gallery,
         maxHeight: 300,
         maxWidth: 300,
         imageQuality: 95,
       );
-
       setState(() {
-        _imageFile = _pickedImage;
+        _imageFile = pickedImage;
       });
     } catch (e) {
       setState(() {
         _pickedImageError = e;
       });
-
-      log('image error $_pickedImageError');
+      log(_pickedImageError);
     }
   }
 
@@ -120,6 +118,9 @@ class _SignUpPageState extends State<SignUpPage> {
           log('$e');
         }
       } else {
+           setState(() {
+      processing = false;
+    });
         setState(() {
           _imageFile = null;
         });
@@ -130,6 +131,9 @@ class _SignUpPageState extends State<SignUpPage> {
         processing = false;
       });
       snackBar('Please fill your blank');
+      setState(() {
+      processing = false;
+    });
     }
   }
 
