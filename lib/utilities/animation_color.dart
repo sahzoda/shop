@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AnimationColor{
+class AnimationColorList{
   static const List<Color> animationcolor=[
     Colors.black,
     Colors.white,

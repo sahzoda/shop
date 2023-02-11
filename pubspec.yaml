@@ -67,17 +67,17 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/accessories
-    - assets/images/bags
-    - assets/images/beauty
-    - assets/images/electronics
-    - assets/images/homegarden
-    - assets/images/inapp
-    - assets/images/kids
-    - assets/images/men
-    - assets/images/shoes
-    - assets/images/try
-    - assets/images/women
+    - assets/images/accessories/
+    - assets/images/bags/
+    - assets/images/beauty/
+    - assets/images/electronics/
+    - assets/images/homegarden/
+    - assets/images/inapp/
+    - assets/images/kids/
+    - assets/images/men/
+    - assets/images/shoes/
+    - assets/images/try/
+    - assets/images/women/
 
 
 
@@ -96,10 +96,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: Acme
+      fonts:
+        - asset: assets/fonts/Acme-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
