@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:shop_app/pages/main_pages/home_page.dart';
-import 'package:shop_app/pages/sign_up_page/sign_up.dart';
+import 'package:shop_app/pages/register_page/sign_up.dart';
 import 'package:shop_app/pages/welcome_page/welcome_page.dart';
 
 void main() async {

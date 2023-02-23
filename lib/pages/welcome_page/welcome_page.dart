@@ -22,7 +22,7 @@ class _WelcomePageState extends State<WelcomePage> {
       decoration: BoxDecoration(
           image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage("assets/images/imapp/bgImage.jpg"))),
+              image: AssetImage("assets/images/inapp/inapp/bgImage.jpg"))),
       constraints: BoxConstraints.expand(),
       child: SafeArea(
         child: Column(
