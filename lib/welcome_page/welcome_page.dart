@@ -2,6 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+import '../constants/colors/app_colors.dart';
 import 'LogSignWidget.dart';
 import 'google_facebookGuestWidget.dart';
 
@@ -103,6 +104,34 @@ class _WelcomePageState extends State<WelcomePage> {
               ],
             )
           ]),
+          Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(30),
+                              bottomRight: Radius.circular(30),
+                            ),
+                            color: AppColors.grey),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Text(
+                            'Cutomers',
+                            style: TextStyle(
+                                color: AppColors.yellow,
+                                fontSize: 30,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                      ),
+                        SizedBox(
+                        height: 6,
+                      ),
+                    
           Padding(
             padding: const EdgeInsets.only(
               right: 70,
@@ -138,51 +167,58 @@ class _WelcomePageState extends State<WelcomePage> {
                         ),
                       ),
                     ],
-                  )),
+                 
+                     
+                      )),
             ),
           ),
           
-              Container(
-                color: Colors.grey.withOpacity(0.7),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    // GoogleFacebookGuestWidget(title: 'Google', icon: Icons.google, onTap: (){}),
-                    GoogleFacebookGuestWidget(
-                        title: 'Google',
-                        color: Color(0xff3F5123),
-                        icon: Icons.laptop_chromebook_sharp,
-                        onTap: () {}),
-                    GoogleFacebookGuestWidget(
-                        title: 'Facebook',
-                        color: Color(0xff3F5798),
-                        icon: Icons.facebook,
-                        onTap: () {}),
-                    GoogleFacebookGuestWidget(
-                        title: 'Guest',
-                        color: Color(0xff3DC5FB),
-                        icon: Icons.person,
-                        onTap: () async {
-                          try {
-                            final userCredential =
-                                await FirebaseAuth.instance.signInAnonymously();
-                            print("Signed in with temporary account.");
-                          } on FirebaseAuthException catch (e) {
-                            switch (e.code) {
-                              case "operation-not-allowed":
-                                print(
-                                    "Anonymous auth hasn't been enabled for this project.");
-                                break;
-                              default:
-                                print("Unknown error.");
-                            }
-                          }
-                        }),
-                  ],
-                ),
-              )
+              // Container(
+              //   color: Colors.grey.withOpacity(0.7),
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.spaceAround,
+              //     children: [
+              //       // GoogleFacebookGuestWidget(title: 'Google', icon: Icons.google, onTap: (){}),
+              //       GoogleFacebookGuestWidget(
+              //           title: 'Google',
+              //           color: Color(0xff3F5123),
+              //           icon: Icons.laptop_chromebook_sharp,
+              //           onTap: () {}),
+              //       GoogleFacebookGuestWidget(
+              //           title: 'Facebook',
+              //           color: Color(0xff3F5798),
+              //           icon: Icons.facebook,
+              //           onTap: () {}),
+              //       GoogleFacebookGuestWidget(
+              //           title: 'Guest',
+              //           color: Color(0xff3DC5FB),
+              //           icon: Icons.person,
+              //           onTap: () async {
+              //             try {
+              //               final userCredential =
+              //                   await FirebaseAuth.instance.signInAnonymously();
+              //               print("Signed in with temporary account.");
+              //             } on FirebaseAuthException catch (e) {
+              //               switch (e.code) {
+              //                 case "operation-not-allowed":
+              //                   print(
+              //                       "Anonymous auth hasn't been enabled for this project.");
+              //                   break;
+              //                 default:
+              //                   print("Unknown error.");
+              //               }
+              //             }
+              //           }),
+              //     ],
+              //   ),
+              // )
         ]),
-      ),
-    ));
+           ] ),
+   ] 
+   )
+      )
+         )
+          );
+        
   }
 }
