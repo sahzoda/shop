@@ -1,21 +1,15 @@
 import 'package:flutter/material.dart';
 
+import '../constants/colors/app_colors.dart';
+
 class LogSignWidget extends StatelessWidget {
   const LogSignWidget({
     super.key,
     required this.title,
-   
-
     required this.onTap,
-     
-
   });
   final String title;
- 
-
   final Function() onTap;
-  
-
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -23,14 +17,16 @@ class LogSignWidget extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: Colors.yellow,
+          color: AppColors.yellow,
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 7),
           child: Text(
             title,
             style: TextStyle(
-                color: Colors.black, fontSize: 15, fontWeight: FontWeight.w600),
+                color: AppColors.black,
+                fontSize: 15,
+                fontWeight: FontWeight.w600),
           ),
         ),
       ),

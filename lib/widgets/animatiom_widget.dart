@@ -31,9 +31,7 @@ class ColorizeAnimationWidget extends StatelessWidget {
           colors: AnimationColorList.animationcolor ,
         ),
       ],
-      // onTap: () {
-      //   print("Tap Event");
-      // },
+      
     );
   }
 }

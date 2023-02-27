@@ -28,7 +28,7 @@ List<Widget> _tabs=[
       child: Scaffold(
         appBar: AppBar(
         backgroundColor: Colors.white,
-          title: searchWidget(),
+          title: SearchWidget(),
            bottom: TabBar(
             indicatorColor: Colors.blue,
             isScrollable: true,
